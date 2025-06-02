@@ -1,0 +1,17 @@
+{
+  "name": "music-player",
+  "version": "1.0.0",
+  "description": "Music player with YouTube Music integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "youtube-music-api": "^1.2.3",
+    "cors": "^2.8.5",
+    "ytdl-core": "^4.11.5",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^11.2.0"
+  }
+} 

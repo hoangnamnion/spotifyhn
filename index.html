@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CHILL</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+  <div class="player">
+    <h2 id="title">Đang tải...</h2>
+
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Tìm kiếm bài hát..." aria-label="Tìm kiếm bài hát">
+        <div id="search-results-list" class="search-results-list" style="display: none;"></div>
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+
+    <div class="label-menu">Chọn bài hát</div>
+    <select id="song-select" aria-label="Chọn bài hát">
+      <!-- Options sẽ được JavaScript thêm -->
+    </select>
+
+    <div class="progress-container" id="progress-container" title="Chọn thời gian phát">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="time">
+      <span id="current-time">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+    <div class="controls">
+      <button id="prev" title="Bài trước">&#9664;&#9664;</button>
+      <button id="play" title="Phát">&#9654;</button>
+      <button id="next" title="Bài tiếp">&#9654;&#9654;</button>
+    </div>
+  </div>
+
+  <div class="rain" id="rain"></div>
+  <div id="uploadForm" class="upload-form">
+    <h3>Upload bài hát mới</h3>
+    <form id="songUploadForm" enctype="multipart/form-data">
+      <input type="text" name="title" placeholder="Tên bài hát" required />
+      <input type="file" name="song" accept=".mp3" required />
+      <input type="file" name="song" accept=".m4a" required />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <div id="youtube-player" style="display: none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

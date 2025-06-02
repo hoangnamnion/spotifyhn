@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  background-image: url('https://cdn.kona-blue.com/upload/kona-blue_com/post/images/2024/09/10/434/anh-sadboy-14.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.player {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  width: 420px;
+  padding: 25px 30px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  position: relative;
+  z-index: 10;
+}
+
+h2 {
+  margin: 0 0 15px;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+.progress-container {
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  height: 8px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.progress {
+  background: #ff4081;
+  height: 8px;
+  border-radius: 10px;
+  width: 0%;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+button {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+button:hover {
+  color: #ff4081;
+}
+
+select {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 12px 15px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  background-color: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+
+select:focus {
+  outline: none;
+  background-color: rgba(255,255,255,0.2);
+  border-color: #ff4081;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+}
+
+select option {
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+select option:hover {
+  background-color: #ff4081;
+}
+
+.label-menu {
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 600;
+  opacity: 0.9;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.5px;
+}
+
+/* Rain effect styling */
+.rain {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.raindrop {
+  position: absolute;
+  bottom: 100%;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Upload form styling */
+.upload-form {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  display: none;
+  width: 300px;
+  z-index: 100;
+}
+
+.upload-form h3 {
+  margin: 0 0 15px;
+  font-size: 1.2rem;
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: rgb(255, 255, 255);
+}
+
+.upload-form input[type="file"] {
+  padding: 5px;
+}
+
+.upload-form button {
+  width: 100%;
+  padding: 10px;
+  background: #ff4081;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.upload-form button:hover {
+  background: #ff1f6d;
+}
+
+.search-container {
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+#search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: rgba(255,255,255,0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#search-input:hover {
+  background-color: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+
+#search-input:focus {
+  outline: none;
+  background-color: rgba(255,255,255,0.2);
+  border-color: #ff4081;
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+}
+
+#search-input:focus + .search-icon {
+  color: #ff4081;
+}
+
+.search-results {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  min-height: 18px;
+  padding-left: 5px;
+  letter-spacing: 0.3px;
+}
+
+.search-results-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 12px;
+  margin-top: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-result-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: rgba(255, 64, 129, 0.2);
+}
+
+.search-result-item.active {
+  background: rgba(255, 64, 129, 0.3);
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.song-thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.song-details {
+  flex: 1;
+}
+
+.song-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.song-artist {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.song-duration {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 12px;
+}
+
+.no-results {
+  color: #ff4081;
+  font-style: italic;
+  padding: 12px 15px;
+}
+
+.error-message {
+  color: #ff4081;
+  font-style: italic;
+  padding: 12px 15px;
+  background: rgba(255, 64, 129, 0.1);
+  border-radius: 8px;
+  display: block;
+  margin-top: 8px;
+} 
